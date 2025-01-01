@@ -23,10 +23,17 @@ class dailyReport {
     
     getReport () {
         console.log('Eagle Creek')
-        console.log(now.toLocaleDateString())
+        console.log(this.now.toLocaleDateString())
         console.log(`Net: $${this.net}`)
         console.log(`Average: $${this.average}`)
         console.log(`TMN: $${this.TMN}`)
         console.log(`OPF: $${this.getOPF()}`)
     }
 }
+
+let net = 95.46 //TODO: rework these values to be gained from the UI
+let transactions = 6
+let TMN = 0
+
+let reportForToday = new dailyReport(net,transactions,TMN)
+reportForToday.getReport()
